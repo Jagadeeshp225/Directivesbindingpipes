@@ -1,0 +1,58 @@
+<!-- <h1>Style binding</h1> -->
+<div *ngif="!b1">
+    Stylebinding
+</div>
+<input type="text" placeholder="Enter the marks" [(ngModel)]="marks"><br>
+<label>please choose one of the option in below dropdown</label><br>
+<select [(ngModel)]="Movies">
+    <option></option>
+    <option>RRR</option>
+    <option>VIKRAM</option>
+</select><br><br>
+<div *ngFor="let i of primenumbers" >
+    <p>{{i}}</p> 
+</div>
+<div>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+            <th>branch</th>
+        </tr>
+        <tr *ngFor="let details of Details">
+            <th>{{details.name}}</th>
+            <th>{{details.age}}</th>
+            <th>{{details.branch}}</th>
+        </tr>
+    </table>
+    </div>
+
+<!-- <button  type="button" (click)="stylebinding()">Result</button><br> -->
+    <!-- <h1 [style.color]="color"><b>{{msg}}</b></h1> -->
+<!-- <button  type="button" (click)="classbinding()">Result</button> -->
+<!-- <div>
+    <h1>Style binding</h1>
+<div *ngIf="b">
+<h1 [ngClass]="classcolor"><b>{{msg}}</b></h1>
+</div>
+<div *ngIf="!b">
+    <h1 [ngClass]="classcolor"><b>{{msg}}</b></h1>
+</div> -->
+<!-- <div *ngIf="b; then template1;else template2"></div>
+<ng-template #template1>
+    <h1 [ngClass]="classcolor"><b>{{msg}}</b></h1>
+</ng-template>
+<ng-template #template2>
+    <h1 [ngClass]="classcolor"><b>{{msg}}</b></h1>
+</ng-template>
+<div [ngSwitch]="marks">
+ <div *ngSwitchCase="'90'">
+    "A Grade"
+ </div>
+</div>
+<div [ngSwitch]="Movies">
+    <div *ngSwitchCase="'RRR'">Selected option is RAM and NTR</div>
+    <div *ngSwitchCase="'VIKRAM'">selected option is Kamal Hasan</div>
+    <div *ngSwitchDefault>please select any one of the option</div>
+</div> -->
+<!--<app-pipes></app-pipes>-->
